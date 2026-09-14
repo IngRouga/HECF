@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HECF Niger — École des Hautes Études Comptables et Financières | Niamey</title>
+<meta name="description" content="HECF Niger forme les futurs managers en gestion, comptabilité, finance, droit et logistique. Niveau Moyen, Licence, Master. Préinscription en ligne — Niamey, Niger.">
+<meta property="og:title" content="HECF Niger — École des Hautes Études Comptables et Financières">
+<meta property="og:description" content="Des formations professionnalisantes en gestion, comptabilité, finance, droit et management à Niamey.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1E38;
+    --navy-2:#122A4D;
+    --burgundy:#7A1930;
+    --orange:#E17A2D;
+    --paper:#F6F5F2;
+    --ink:#1B2230;
+    --line:rgba(11,30,56,0.12);
+    --muted:#5B6472;
+    --white:#FFFFFF;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Plus Jakarta Sans', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .display{font-family:'Fraunces', serif;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-size:.78rem;
+    letter-spacing:.02em;
+    color:var(--burgundy);
+    font-weight:700;
+    margin:0 0 10px;
+  }
+  section{position:relative;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:15px 28px;
+    font-weight:700;
+    font-size:.95rem;
+    border-radius:var(--radius);
+    cursor:pointer;
+    border:1.5px solid transparent;
+    transition:transform .15s ease, background .2s ease, border-color .2s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(.98);}
+  .btn-primary{background:var(--orange);color:var(--navy);}
+  .btn-primary:hover{background:#c96a24;}
+  .btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.5);}
+  .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+  .btn-dark{background:var(--navy);color:#fff;}
+  .btn-dark:hover{background:var(--navy-2);}
+  .btn-ghost{background:transparent;color:var(--navy);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--navy);}
+
+  /* NAV */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(11,30,56,0.97);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .navwrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;max-width:1180px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:12px;color:#fff;}
+  .brand img{width:42px;height:42px;border-radius:50%;background:#fff;}
+  .brand-text{line-height:1.1;}
+  .brand-text b{display:block;font-size:1rem;letter-spacing:.01em;}
+  .brand-text span{display:block;font-size:.7rem;color:#B9C3D6;letter-spacing:.04em;}
+  nav.links{display:none;gap:28px;align-items:center;}
+  nav.links a{color:#DCE3EF;font-size:.92rem;font-weight:500;}
+  nav.links a:hover{color:#fff;}
+  .nav-cta{display:none;}
+  .burger{background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1;}
+  @media(min-width:1000px){
+    nav.links{display:flex;}
+    .nav-cta{display:inline-flex;}
+    .burger{display:none;}
+  }
+  .mobile-menu{
+    display:none;flex-direction:column;background:var(--navy);
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{padding:16px 24px;color:#DCE3EF;border-bottom:1px solid rgba(255,255,255,.06);font-weight:500;}
+  .mobile-menu .mm-cta{padding:18px 24px;}
+
+  /* HERO */
+  .hero{
+    position:relative;color:#fff;overflow:hidden;
+    background:linear-gradient(180deg, rgba(8,20,38,.55), rgba(8,20,38,.88)), var(--navy);
+  }
+  .hero-media{position:absolute;inset:0;}
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 20%;opacity:.55;}
+  .hero-inner{position:relative;max-width:1180px;margin:0 auto;padding:100px 24px 90px;}
+  .hero-tag{
+    display:inline-block;padding:7px 14px;border:1px solid rgba(255,255,255,.3);
+    border-radius:20px;font-size:.78rem;color:#E9EDF5;margin-bottom:26px;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem,5.5vw,3.6rem);
+    line-height:1.08;margin:0 0 22px;font-weight:600;max-width:760px;
+  }
+  .hero p.lede{font-size:1.1rem;color:#CBD5E5;max-width:560px;margin:0 0 36px;line-height:1.55;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:46px;}
+  .hero-credibility{
+    display:flex;align-items:center;gap:12px;color:#B9C3D6;font-size:.88rem;
+    border-top:1px solid rgba(255,255,255,.15);padding-top:22px;max-width:520px;
+  }
+  .hero-credibility .dash{width:28px;height:1px;background:var(--orange);flex-shrink:0;}
+
+  /* TRUST BAND */
+  .trust{background:var(--navy);color:#fff;padding:34px 0;}
+  .trust-row{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:center;}
+  .trust-item{display:flex;align-items:center;gap:14px;}
+  .trust-item .lvl{
+    font-family:'Fraunces',serif;font-size:1.7rem;color:var(--orange);
+  }
+  .trust-item .lbl{font-size:.82rem;color:#B9C3D6;max-width:150px;line-height:1.3;}
+  .trust-note{font-size:.85rem;color:#DCE3EF;border-left:1px solid rgba(255,255,255,.25);padding-left:22px;max-width:280px;line-height:1.4;}
+
+  /* SECTION HEADERS */
+  .sec{padding:88px 0;}
+  .sec-head{max-width:640px;margin:0 0 52px;}
+  .sec-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:0 0 14px;font-weight:600;line-height:1.18;}
+  .sec-head p{color:var(--muted);font-size:1.02rem;line-height:1.6;margin:0;}
+  .sec-alt{background:#fff;}
+
+  /* PROGRAMS */
+  .prog-tabs{display:flex;gap:10px;margin-bottom:36px;flex-wrap:wrap;}
+  .prog-tab{
+    padding:10px 20px;border:1.5px solid var(--line);border-radius:30px;
+    font-size:.88rem;font-weight:600;cursor:pointer;background:#fff;color:var(--navy);
+  }
+  .prog-tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .prog-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:700px){.prog-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:1020px){.prog-grid{grid-template-columns:1fr 1fr 1fr;}}
+  .prog-card{
+    background:#fff;border:1px solid var(--line);padding:28px 26px;
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .prog-card .plevel{font-size:.72rem;font-weight:700;letter-spacing:.03em;color:var(--burgundy);}
+  .prog-card h3{margin:0;font-size:1.12rem;line-height:1.3;font-weight:700;}
+  .prog-card p{margin:0;color:var(--muted);font-size:.92rem;line-height:1.5;flex-grow:1;}
+  .prog-card .plink{font-size:.88rem;font-weight:700;color:var(--navy);display:inline-flex;align-items:center;gap:6px;}
+  .prog-card{transition:border-color .2s ease;}
+  .prog-card:hover{border-color:var(--navy);}
+  .prog-hidden{display:none;}
+
+  /* WHY */
+  .why-grid{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line);}
+  @media(min-width:800px){.why-grid{grid-template-columns:1fr 1fr;}}
+  .why-item{padding:30px 8px;border-bottom:1px solid var(--line);display:flex;gap:18px;}
+  @media(min-width:800px){.why-item:nth-child(odd){border-right:1px solid var(--line);padding-right:36px;}
+    .why-item:nth-child(even){padding-left:36px;}}
+  .why-num{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--orange);flex-shrink:0;width:36px;}
+  .why-item h4{margin:0 0 8px;font-size:1.02rem;}
+  .why-item p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.5;}
+
+  /* ABOUT */
+  .about-wrap{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;}
+  @media(min-width:900px){.about-wrap{grid-template-columns:1fr 1fr;gap:60px;}}
+  .about-img{position:relative;}
+  .about-img img{width:100%;height:420px;object-fit:cover;}
+  .about-copy p{color:var(--muted);line-height:1.7;font-size:1rem;}
+
+  /* LEADERSHIP */
+  .lead-wrap{display:grid;grid-template-columns:1fr;gap:36px;align-items:center;background:var(--navy);color:#fff;padding:48px;}
+  @media(min-width:800px){.lead-wrap{grid-template-columns:220px 1fr;padding:56px;}}
+  .lead-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top;}
+  .lead-copy .eyebrow{color:var(--orange);}
+  .lead-copy h3{margin:0 0 6px;font-size:1.5rem;}
+  .lead-copy .role{color:#B9C3D6;margin:0 0 18px;font-size:.95rem;}
+  .lead-copy p.bio{color:#CBD5E5;line-height:1.65;max-width:560px;margin:0;}
+
+  /* CAMPUS GALLERY */
+  .gal-filter{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+  .gal-filter button{
+    padding:8px 16px;border-radius:30px;border:1.5px solid var(--line);background:#fff;
+    font-size:.82rem;font-weight:600;cursor:pointer;color:var(--navy);
+  }
+  .gal-filter button.active{background:var(--burgundy);color:#fff;border-color:var(--burgundy);}
+  .masonry{columns:2;column-gap:12px;}
+  @media(min-width:700px){.masonry{columns:3;}}
+  .masonry figure{margin:0 0 12px;break-inside:avoid;position:relative;cursor:zoom-in;overflow:hidden;}
+  .masonry img{width:100%;display:block;transition:transform .3s ease;}
+  .masonry figure:hover img{transform:scale(1.04);}
+  .masonry figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:10px 12px;
+    background:linear-gradient(0deg, rgba(0,0,0,.65), transparent);
+    color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.02em;
+  }
+
+  /* SUCCESS */
+  .success-band{background:var(--burgundy);color:#fff;}
+  .success-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+  @media(min-width:700px){.success-grid{grid-template-columns:1.2fr 1fr 1fr;}}
+  .success-grid img{width:100%;height:280px;object-fit:cover;}
+  .success-copy{max-width:560px;margin-bottom:36px;}
+  .success-copy p{color:#F2D9DD;line-height:1.6;font-size:1.02rem;}
+
+  /* NEWS */
+  .news-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+  @media(min-width:800px){.news-grid{grid-template-columns:1fr 1fr 1fr;}}
+  .news-card{background:#fff;border:1px solid var(--line);}
+  .news-card .thumb{height:170px;background:linear-gradient(135deg,var(--navy),var(--navy-2));display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:.8rem;}
+  .news-body{padding:22px;}
+  .news-cat{font-size:.7rem;font-weight:700;color:var(--burgundy);letter-spacing:.03em;}
+  .news-date{font-size:.75rem;color:var(--muted);float:right;}
+  .news-body h4{margin:14px 0 8px;font-size:1.02rem;line-height:1.35;clear:both;}
+  .news-body p{margin:0 0 14px;color:var(--muted);font-size:.88rem;line-height:1.5;}
+  .news-body a{font-size:.85rem;font-weight:700;color:var(--navy);}
+
+  /* ADMISSIONS */
+  .admissions{background:var(--navy);color:#fff;}
+  .steps{display:grid;grid-template-columns:1fr;gap:0;margin:44px 0 48px;border-top:1px solid rgba(255,255,255,.15);}
+  @media(min-width:900px){.steps{grid-template-columns:repeat(5,1fr);}}
+  .step{padding:24px 18px 24px 0;border-bottom:1px solid rgba(255,255,255,.15);}
+  @media(min-width:900px){.step{border-right:1px solid rgba(255,255,255,.15);padding:24px 18px;}
+    .step:last-child{border-right:none;}}
+  .step .stepnum{font-family:'Fraunces',serif;color:var(--orange);font-size:1.3rem;display:block;margin-bottom:10px;}
+  .step p{margin:0;font-size:.9rem;color:#DCE3EF;line-height:1.4;}
+
+  .form-card{background:#fff;color:var(--ink);padding:36px;max-width:760px;}
+  .form-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:640px){.form-grid{grid-template-columns:1fr 1fr;}}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-size:.82rem;font-weight:600;color:var(--navy);}
+  .field input,.field select,.field textarea{
+    padding:12px 14px;border:1.5px solid var(--line);border-radius:2px;font-size:.95rem;
+    font-family:inherit;background:#fbfbfa;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--orange);outline-offset:1px;border-color:var(--orange);}
+  .form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:26px;}
+  .form-note{font-size:.82rem;color:var(--muted);}
+  .success-msg{display:none;padding:20px;background:#EEF6EE;border:1px solid #BFE0C0;color:#2A5C2C;font-size:.92rem;margin-top:18px;}
+  .success-msg.show{display:block;}
+  .wa-help{margin-top:22px;font-size:.9rem;}
+  .wa-help a{color:var(--burgundy);font-weight:700;}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:40px;}
+  @media(min-width:900px){.contact-grid{grid-template-columns:1fr 1fr;}}
+  .contact-list{list-style:none;padding:0;margin:0 0 28px;}
+  .contact-list li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:2px;}
+  .contact-list .clabel{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;}
+  .contact-list .cval{font-size:1.02rem;font-weight:600;}
+  .map-box{background:#E7E9ED;height:100%;min-height:300px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem;text-align:center;padding:24px;border:1px solid var(--line);}
+  .contact-form .field{margin-bottom:16px;}
+
+  /* FOOTER */
+  footer{background:#081527;color:#B9C3D6;padding:64px 0 28px;}
+  .foot-grid{display:grid;grid-template-columns:1fr;gap:36px;margin-bottom:48px;}
+  @media(min-width:800px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr;}}
+  .foot-brand{display:flex;gap:12px;align-items:center;margin-bottom:16px;}
+  .foot-brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+  .foot-brand b{color:#fff;font-size:1rem;}
+  footer p.desc{font-size:.88rem;line-height:1.6;max-width:320px;}
+  footer h5{color:#fff;font-size:.82rem;letter-spacing:.03em;margin:0 0 16px;}
+  footer ul{list-style:none;padding:0;margin:0;}
+  footer li{margin-bottom:10px;font-size:.88rem;}
+  footer li a:hover{color:#fff;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;font-size:.78rem;color:#7C8AA1;}
+  .foot-bottom a{margin-left:16px;}
+
+  /* WHATSAPP + AI FLOATING */
+  .float-stack{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
+  .fab{
+    width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 22px rgba(0,0,0,.25);cursor:pointer;border:none;font-size:1.5rem;
+  }
+  .fab-ai{background:var(--navy);color:#fff;}
+  .fab-wa{background:#25D366;color:#fff;}
+
+  .ai-panel{
+    display:none;position:fixed;right:20px;bottom:88px;width:320px;max-width:88vw;
+    background:#fff;border-radius:6px;box-shadow:0 20px 50px rgba(0,0,0,.25);
+    overflow:hidden;z-index:210;border:1px solid var(--line);
+  }
+  .ai-panel.open{display:block;}
+  .ai-head{background:var(--navy);color:#fff;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;}
+  .ai-head b{font-size:.92rem;}
+  .ai-close{background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer;}
+  .ai-body{padding:16px 18px;max-height:340px;overflow-y:auto;}
+  .ai-msg{background:#F1F3F6;padding:12px 14px;border-radius:8px;font-size:.86rem;line-height:1.5;margin-bottom:12px;}
+  .ai-suggest{display:flex;flex-direction:column;gap:8px;}
+  .ai-suggest button{
+    text-align:left;padding:10px 12px;border:1px solid var(--line);background:#fff;
+    border-radius:6px;font-size:.82rem;cursor:pointer;color:var(--navy);
+  }
+  .ai-suggest button:hover{border-color:var(--navy);}
+
+  /* LIGHTBOX */
+  .lightbox{display:none;position:fixed;inset:0;background:rgba(6,12,24,.92);z-index:300;align-items:center;justify-content:center;padding:24px;}
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:100%;max-height:88vh;}
+  .lightbox-close{position:absolute;top:24px;right:28px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:none;}
+
+  .breadcrumb{font-size:.78rem;color:var(--muted);margin-bottom:18px;}
+  .breadcrumb a{color:var(--navy);font-weight:600;}
+
+  ::selection{background:var(--orange);color:#fff;}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <div class="navwrap">
+    <a href="#home" class="brand">
+      <img src="images/637801.jpg" alt="Logo HECF">
+      <span class="brand-text"><b>HECF Niger</b><span>Hautes Études Comptables &amp; Financières</span></span>
+    </a>
+    <nav class="links">
+      <a href="#universite">L'Université</a>
+      <a href="#formations">Formations</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#vie">Vie universitaire</a>
+      <a href="#actualites">Actualités</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#admissions" class="btn btn-primary nav-cta">Préinscription</a>
+    <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <a href="#universite">L'Université</a>
+    <a href="#formations">Formations</a>
+    <a href="#admissions">Admissions</a>
+    <a href="#vie">Vie universitaire</a>
+    <a href="#actualites">Actualités</a>
+    <a href="#contact">Contact</a>
+    <div class="mm-cta"><a href="#admissions" class="btn btn-primary" style="width:100%;">Préinscription</a></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-media"><img src="images/637803.jpg" alt="Étudiants et diplômés HECF Niger devant le campus"></div>
+  <div class="hero-inner">
+    <span class="hero-tag">École des Hautes Études Comptables et Financières — Niamey</span>
+    <h1 class="display">Construisez votre avenir.<br>Devenez le manager de demain.</h1>
+    <p class="lede">Des formations professionnalisantes en gestion, comptabilité, finance, droit et management, du Niveau Moyen au Master.</p>
+    <div class="hero-ctas">
+      <a href="#admissions" class="btn btn-primary">Préinscription</a>
+      <a href="#formations" class="btn btn-outline">Découvrir nos formations</a>
+    </div>
+    <div class="hero-credibility"><span class="dash"></span> Une formation d'excellence au service de la réussite professionnelle.</div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="container trust-row">
+    <div class="trust-item"><span class="lvl">Niveau Moyen</span></div>
+    <div class="trust-item"><span class="lvl">Licence</span></div>
+    <div class="trust-item"><span class="lvl">Master</span></div>
+    <div class="trust-note">Nos diplômes sont reconnus par l'État et le CAMES.</div>
+  </div>
+</div>
+
+<!-- PROGRAMS -->
+<section class="sec" id="formations">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Formations</p>
+      <h2 class="display">Nos formations</h2>
+      <p>Des parcours conçus pour développer les compétences recherchées dans le monde professionnel.</p>
+    </div>
+
+    <div class="prog-tabs">
+      <button class="prog-tab active" data-tab="all">Toutes</button>
+      <button class="prog-tab" data-tab="moyen">Niveau Moyen</button>
+      <button class="prog-tab" data-tab="licence">Licence</button>
+      <button class="prog-tab" data-tab="master">Master</button>
+    </div>
+
+    <div class="prog-grid" id="progGrid">
+
+      <div class="prog-card" data-cat="moyen">
+        <span class="plevel">Niveau Moyen</span>
+        <h3>Cycle Niveau Moyen</h3>
+        <p>Un socle de compétences en gestion pour démarrer un parcours professionnalisant solide.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+
+      <div class="prog-card" data-cat="licence">
+        <span class="plevel">Licence</span>
+        <h3>Management en Administration des Entreprises</h3>
+        <p>Piloter les fonctions clés d'une organisation, de la stratégie aux opérations.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="licence">
+        <span class="plevel">Licence</span>
+        <h3>Finance - Banque</h3>
+        <p>Comprendre les marchés, les institutions financières et la gestion bancaire.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="licence">
+        <span class="plevel">Licence</span>
+        <h3>Comptabilité - Fiscalité</h3>
+        <p>Maîtriser les normes comptables et les obligations fiscales des entreprises.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="licence">
+        <span class="plevel">Licence</span>
+        <h3>Gestion des Projets</h3>
+        <p>Planifier, piloter et livrer des projets dans des environnements exigeants.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="licence">
+        <span class="plevel">Licence</span>
+        <h3>Informatique de Gestion</h3>
+        <p>Allier outils numériques et logique de gestion pour l'entreprise moderne.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="licence">
+        <span class="plevel">Licence</span>
+        <h3>Marketing et Commerce International</h3>
+        <p>Développer des stratégies commerciales dans un contexte international.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="licence">
+        <span class="plevel">Licence</span>
+        <h3>Logistique - Transport</h3>
+        <p>Optimiser les chaînes d'approvisionnement et les flux de transport.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="licence">
+        <span class="plevel">Licence</span>
+        <h3>Droit des Affaires</h3>
+        <p>Sécuriser juridiquement les activités et transactions des entreprises.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="licence">
+        <span class="plevel">Licence</span>
+        <h3>Droit International Humanitaire</h3>
+        <p>Comprendre le cadre juridique de l'action humanitaire internationale.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+
+      <div class="prog-card" data-cat="master">
+        <span class="plevel">Master</span>
+        <h3>Master en Business Administration</h3>
+        <p>Approfondir la stratégie et le management général des organisations.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="master">
+        <span class="plevel">Master</span>
+        <h3>Master en Management des Ressources Humaines</h3>
+        <p>Piloter la fonction RH dans un environnement en mutation.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="master">
+        <span class="plevel">Master</span>
+        <h3>Master en Comptabilité - Fiscalité</h3>
+        <p>Se spécialiser dans l'expertise comptable et fiscale avancée.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="master">
+        <span class="plevel">Master</span>
+        <h3>Master en Gestion de Projets</h3>
+        <p>Diriger des projets complexes avec une approche stratégique.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="master">
+        <span class="plevel">Master</span>
+        <h3>Master en Comptabilité, Contrôle et Audit</h3>
+        <p>Se spécialiser dans le contrôle de gestion et l'audit financier.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="master">
+        <span class="plevel">Master</span>
+        <h3>Master en Marketing et Commerce International</h3>
+        <p>Approfondir les stratégies commerciales à l'échelle internationale.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="master">
+        <span class="plevel">Master</span>
+        <h3>Master en Droit des Affaires</h3>
+        <p>Maîtriser les enjeux juridiques avancés du monde des affaires.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+      <div class="prog-card" data-cat="master">
+        <span class="plevel">Master</span>
+        <h3>Master en Droit International Humanitaire</h3>
+        <p>Se spécialiser dans le droit humanitaire au niveau international.</p>
+        <a href="#admissions" class="plink">Découvrir la formation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec sec-alt">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Pourquoi HECF</p>
+      <h2 class="display">Pourquoi choisir HECF ?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><span class="why-num display">01</span><div><h4>Formations professionnalisantes</h4><p>Des programmes pensés pour préparer directement à l'exercice d'un métier.</p></div></div>
+      <div class="why-item"><span class="why-num display">02</span><div><h4>Parcours Licence &amp; Master</h4><p>Une progression académique claire, du premier cycle à la spécialisation.</p></div></div>
+      <div class="why-item"><span class="why-num display">03</span><div><h4>Orientation métiers</h4><p>Des filières tournées vers la gestion, la finance, le droit et la logistique.</p></div></div>
+      <div class="why-item"><span class="why-num display">04</span><div><h4>Environnement académique</h4><p>Un cadre d'apprentissage structuré, propice à la réussite des étudiants.</p></div></div>
+      <div class="why-item"><span class="why-num display">05</span><div><h4>Ouverture professionnelle</h4><p>Des formations conçues en lien avec les réalités du monde du travail.</p></div></div>
+      <div class="why-item"><span class="why-num display">06</span><div><h4>Reconnaissance institutionnelle</h4><p>Des diplômes reconnus par l'État et le CAMES.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="universite">
+  <div class="container">
+    <div class="about-wrap">
+      <div class="about-img"><img src="images/637811.jpg" alt="Cours en salle de classe à HECF Niger"></div>
+      <div class="about-copy">
+        <p class="eyebrow">L'université</p>
+        <h2 class="display">Une institution tournée vers l'avenir</h2>
+        <p>L'École des Hautes Études Comptables et Financières (HECF Niger) prépare étudiants et professionnels dans les domaines du management, de la finance, de la comptabilité, du droit, de la logistique et de la gestion de projets.</p>
+        <p>À travers ses formations de Niveau Moyen, de Licence et de Master, HECF Niger accompagne chaque étudiant dans la construction d'un parcours professionnel solide, en cohérence avec les exigences du monde du travail.</p>
+        <a href="#formations" class="btn btn-ghost">Découvrir HECF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="sec sec-alt">
+  <div class="container">
+    <div class="lead-wrap">
+      <div class="lead-photo"><img src="images/637807.jpg" alt="Directeur Général de HECF Niger"></div>
+      <div class="lead-copy">
+        <p class="eyebrow">Direction générale</p>
+        <h3>Nom du Directeur Général</h3>
+        <p class="role">Directeur Général de HECF Niger</p>
+        <p class="bio">Sous la conduite de sa direction générale, HECF Niger poursuit sa mission de formation des cadres et managers de demain, au service de l'excellence académique et professionnelle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPUS LIFE -->
+<section class="sec" id="vie">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Vie universitaire</p>
+      <h2 class="display">La vie à HECF</h2>
+      <p>Cours, cérémonies, remises de diplômes et moments forts de la communauté HECF.</p>
+    </div>
+    <div class="gal-filter" id="galFilter">
+      <button class="active" data-cat="all">Tout</button>
+      <button data-cat="cours">Cours</button>
+      <button data-cat="ceremonies">Cérémonies</button>
+      <button data-cat="diplomes">Diplômes</button>
+      <button data-cat="evenements">Événements</button>
+    </div>
+    <div class="masonry" id="masonry">
+      <figure data-cat="cours"><img src="images/637814.jpg" alt="Cours en amphithéâtre"><figcaption>Cours</figcaption></figure>
+      <figure data-cat="cours"><img src="images/637811.jpg" alt="Cours en salle de classe"><figcaption>Cours</figcaption></figure>
+      <figure data-cat="diplomes"><img src="images/637806.jpg" alt="Remise de diplôme"><figcaption>Diplômes</figcaption></figure>
+      <figure data-cat="diplomes"><img src="images/637804.jpg" alt="Remise de diplôme"><figcaption>Diplômes</figcaption></figure>
+      <figure data-cat="ceremonies"><img src="images/637805.jpg" alt="Cérémonie académique"><figcaption>Cérémonies</figcaption></figure>
+      <figure data-cat="evenements"><img src="images/637803.jpg" alt="Événement institutionnel"><figcaption>Événements</figcaption></figure>
+      <figure data-cat="ceremonies"><img src="images/637802.jpg" alt="Cérémonie de collation des diplômes"><figcaption>Cérémonies</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
+<section class="success-band sec">
+  <div class="container">
+    <div class="success-copy">
+      <p class="eyebrow" style="color:#F2C9A0;">Réussite</p>
+      <h2 class="display">Nos étudiants, notre fierté</h2>
+      <p>Chaque diplôme représente un parcours, un engagement et une nouvelle étape vers l'avenir.</p>
+    </div>
+    <div class="success-grid">
+      <img src="images/637806.jpg" alt="Diplômés HECF célébrant leur réussite">
+      <img src="images/637804.jpg" alt="Remise de diplôme HECF">
+      <img src="images/637805.jpg" alt="Diplômées HECF avec la direction">
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="sec sec-alt" id="actualites">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Actualités</p>
+      <h2 class="display">Actualités HECF</h2>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="thumb">Image à venir</div>
+        <div class="news-body">
+          <span class="news-cat">Admissions</span><span class="news-date">2026</span>
+          <h4>Ouverture des préinscriptions pour la prochaine rentrée</h4>
+          <p>Les inscriptions sont ouvertes pour les niveaux Moyen, Licence et Master.</p>
+          <a href="#admissions">Lire l'article →</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="thumb">Image à venir</div>
+        <div class="news-body">
+          <span class="news-cat">Cérémonies</span><span class="news-date">2026</span>
+          <h4>Cérémonie de collation des diplômes</h4>
+          <p>Retour sur la dernière cérémonie de remise des diplômes aux étudiants de HECF.</p>
+          <a href="#vie">Lire l'article →</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="thumb">Image à venir</div>
+        <div class="news-body">
+          <span class="news-cat">Vie universitaire</span><span class="news-date">2026</span>
+          <h4>Reprise des cours pour l'année académique</h4>
+          <p>Les cours ont repris dans l'ensemble des filières de l'institution.</p>
+          <a href="#vie">Lire l'article →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section class="sec admissions" id="admissions">
+  <div class="container">
+    <p class="eyebrow" style="color:var(--orange);">Admissions</p>
+    <h2 class="display" style="font-size:clamp(1.8rem,3.6vw,2.6rem);margin:0 0 14px;">Rejoignez HECF Niger</h2>
+    <p style="color:#CBD5E5;max-width:560px;">Suivez les étapes ci-dessous pour préparer votre dossier de candidature.</p>
+
+    <div class="steps">
+      <div class="step"><span class="stepnum display">01</span><p>Choisissez votre niveau</p></div>
+      <div class="step"><span class="stepnum display">02</span><p>Choisissez votre formation</p></div>
+      <div class="step"><span class="stepnum display">03</span><p>Préparez votre dossier</p></div>
+      <div class="step"><span class="stepnum display">04</span><p>Soumettez votre candidature</p></div>
+      <div class="step"><span class="stepnum display">05</span><p>Recevez les informations de l'administration</p></div>
+    </div>
+
+    <div class="form-card">
+      <h3 style="margin:0 0 6px;">Commencer ma préinscription</h3>
+      <p style="color:var(--muted);font-size:.9rem;margin:0 0 24px;">Remplissez le formulaire ci-dessous. Notre équipe vous recontactera rapidement.</p>
+      <form id="preregForm">
+        <div class="form-grid">
+          <div class="field"><label for="nom">Nom</label><input id="nom" required type="text"></div>
+          <div class="field"><label for="prenom">Prénom</label><input id="prenom" required type="text"></div>
+          <div class="field"><label for="tel">Téléphone</label><input id="tel" required type="tel"></div>
+          <div class="field"><label for="email">Email</label><input id="email" required type="email"></div>
+          <div class="field"><label for="dob">Date de naissance</label><input id="dob" type="date"></div>
+          <div class="field"><label for="niveau">Niveau d'étude</label>
+            <select id="niveau">
+              <option>Niveau Moyen</option>
+              <option>Licence</option>
+              <option>Master</option>
+            </select>
+          </div>
+          <div class="field"><label for="formation">Formation souhaitée</label><input id="formation" type="text" placeholder="Ex. Finance - Banque"></div>
+          <div class="field"><label for="ville">Ville</label><input id="ville" type="text"></div>
+          <div class="field full"><label for="doc">Document (optionnel)</label><input id="doc" type="file"></div>
+          <div class="field full"><label for="msg">Message</label><textarea id="msg" rows="4"></textarea></div>
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-primary">Soumettre ma candidature</button>
+          <span class="form-note">Vos données sont utilisées uniquement dans le cadre de votre candidature.</span>
+        </div>
+        <div class="success-msg" id="successMsg">Votre préinscription a bien été reçue. L'administration de HECF Niger vous contactera prochainement.</div>
+      </form>
+      <div class="wa-help">Besoin d'aide ? <a href="https://wa.me/22790786049" target="_blank" rel="noopener">Contacter l'administration sur WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec sec-alt" id="contact">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Contact</p>
+      <h2 class="display">Parlons de votre projet d'études</h2>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <ul class="contact-list">
+          <li><span class="clabel">Téléphone</span><span class="cval">+227 90 78 60 49 · +227 88 91 22 35</span></li>
+          <li><span class="clabel">Email</span><span class="cval">hecfniger15@gmail.com</span></li>
+          <li><span class="clabel">Localisation</span><span class="cval">Nous sommes situés à 100m de l'échangeur en allant vers l'École Alliance — Boukoki 1, Niamey</span></li>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <a href="tel:+22790786049" class="btn btn-dark">Appeler HECF</a>
+          <a href="https://wa.me/22790786049" target="_blank" rel="noopener" class="btn" style="background:#25D366;color:#fff;">WhatsApp</a>
+          <a href="mailto:hecfniger15@gmail.com" class="btn btn-ghost">Envoyer un email</a>
+        </div>
+      </div>
+      <div class="map-box">Carte — Boukoki 1, à 100m de l'échangeur en allant vers l'École Alliance, Niamey</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/637801.jpg" alt="Logo HECF"><b>HECF Niger</b></div>
+        <p class="desc">École des Hautes Études Comptables et Financières — des formations professionnalisantes en gestion, comptabilité, finance, droit et management, à Niamey.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#universite">L'Université</a></li>
+          <li><a href="#formations">Formations</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#vie">Vie universitaire</a></li>
+          <li><a href="#actualites">Actualités</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>+227 90 78 60 49</li>
+          <li>+227 88 91 22 35</li>
+          <li>hecfniger15@gmail.com</li>
+          <li>Boukoki 1, Niamey</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© HECF Niger — Tous droits réservés.</span>
+      <span><a href="#">Mentions légales</a><a href="#">Politique de confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING -->
+<div class="float-stack">
+  <a class="fab fab-wa" href="https://wa.me/22790786049" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  <button class="fab fab-ai" onclick="document.getElementById('aiPanel').classList.toggle('open')" aria-label="Assistant HECF">🎓</button>
+</div>
+
+<div class="ai-panel" id="aiPanel">
+  <div class="ai-head"><b>Assistant HECF</b><button class="ai-close" onclick="document.getElementById('aiPanel').classList.remove('open')">×</button></div>
+  <div class="ai-body">
+    <div class="ai-msg">Bonjour 👋<br>Je suis l'assistant HECF.<br>Comment puis-je vous aider ?</div>
+    <div class="ai-suggest">
+      <button onclick="document.getElementById('formations').scrollIntoView()">Quelles formations proposez-vous ?</button>
+      <button onclick="document.getElementById('admissions').scrollIntoView()">Je veux m'inscrire.</button>
+      <button onclick="document.getElementById('formations').scrollIntoView()">Quelle formation choisir après le bac ?</button>
+      <button onclick="document.getElementById('formations').scrollIntoView()">Je cherche un Master.</button>
+      <button onclick="document.getElementById('contact').scrollIntoView()">Comment contacter HECF ?</button>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+  // Program tabs
+  document.querySelectorAll('.prog-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.prog-tab').forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      var cat = tab.dataset.tab;
+      document.querySelectorAll('#progGrid .prog-card').forEach(function(card){
+        if(cat === 'all' || card.dataset.cat === cat){
+          card.classList.remove('prog-hidden');
+        } else {
+          card.classList.add('prog-hidden');
+        }
+      });
+    });
+  });
+
+  // Gallery filter
+  document.querySelectorAll('#galFilter button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('#galFilter button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      var cat = btn.dataset.cat;
+      document.querySelectorAll('#masonry figure').forEach(function(fig){
+        fig.style.display = (cat === 'all' || fig.dataset.cat === cat) ? '' : 'none';
+      });
+    });
+  });
+
+  // Lightbox
+  document.querySelectorAll('#masonry img').forEach(function(img){
+    img.addEventListener('click', function(){
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('lightbox').classList.add('open');
+    });
+  });
+
+  // Form submit
+  document.getElementById('preregForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('successMsg').classList.add('show');
+    this.reset();
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.mobile-menu a').forEach(function(a){
+    a.addEventListener('click', function(){ document.getElementById('mmenu').classList.remove('open'); });
+  });
+</script>
+</body>
+</html>

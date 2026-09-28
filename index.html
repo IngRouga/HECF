@@ -438,6 +438,51 @@
     .reveal-img::after{display:none;}
   }
 
+
+  /* ===== MOBILE OVERFLOW FIXES (root causes) ===== */
+  html,body{width:100%;max-width:100%;}
+  img,svg,video{max-width:100%;height:auto;}
+  .hero-media img{height:100%;}
+  .about-img img,.lead-photo img,.success-grid img{height:auto;}
+  /* Grid/flex children must be allowed to shrink below intrinsic content width */
+  .form-grid{grid-template-columns:minmax(0,1fr);}
+  @media(min-width:640px){.form-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+  .field{min-width:0;}
+  .field input,.field select,.field textarea{width:100%;max-width:100%;min-width:0;display:block;}
+  .prog-grid,.news-grid,.why-grid,.steps,.success-grid,.contact-grid,.about-wrap,.lead-wrap,.foot-grid{min-width:0;}
+  .prog-grid>*,.news-grid>*,.why-grid>*,.steps>*,.success-grid>*,.contact-grid>*,.about-wrap>*,.lead-wrap>*,.foot-grid>*{min-width:0;}
+  .prog-grid{grid-template-columns:minmax(0,1fr);}
+  @media(min-width:700px){.prog-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+  @media(min-width:1020px){.prog-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+  .form-card{max-width:100%;}
+  .contact-list .cval,.prog-card h3,.news-body h4,.hero h1,.foot-grid li{overflow-wrap:anywhere;}
+  .brand{min-width:0;}
+  .brand-text{min-width:0;}
+  .brand-text span{white-space:normal;}
+  .prog-hidden{display:none;position:static;}
+  .hero-inner{width:100%;}
+  @media(max-width:600px){
+    .container,.navwrap{padding-left:18px;padding-right:18px;}
+    .hero-inner{padding:72px 18px 64px;}
+    .hero-ctas .btn{flex:1 1 100%;white-space:normal;}
+    .form-card{padding:22px 18px;}
+    .lead-wrap{padding:28px 20px;}
+    .sec{padding:64px 0;}
+    .float-stack{right:16px;bottom:16px;}
+    .ai-panel{right:16px;left:16px;width:auto;max-width:none;bottom:84px;}
+    .contact-list li .cval{font-size:.98rem;}
+    .btn{white-space:normal;text-align:center;}
+    .trust-note{border-left:none;padding-left:0;max-width:none;}
+  }
+
+
+  /* Navbar overlays hero when transparent */
+  header{position:fixed;top:0;left:0;right:0;width:100%;}
+  header:not(.scrolled){background:linear-gradient(180deg,rgba(8,20,38,.75),rgba(8,20,38,.25));}
+  .hero-inner{padding-top:150px;}
+  @media(max-width:600px){.hero-inner{padding-top:120px;}}
+  header.menu-open{background:rgba(11,30,56,.98)!important;}
+
 </style>
 </head>
 <body>
@@ -458,7 +503,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <a href="#admissions" class="btn btn-primary nav-cta">Préinscription</a>
-    <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')" aria-label="Menu">☰</button>
+    <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open');document.querySelector('header').classList.toggle('menu-open')" aria-label="Menu">☰</button>
   </div>
   <div class="mobile-menu" id="mmenu">
     <a href="#universite">L'Université</a>
